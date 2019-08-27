@@ -7,6 +7,7 @@ public class PriceCalculator {
     	double discount_prince = Math.max(0, quantity - 500) * itemPrice * 0.05;
     	double shipping_cost = Math.min(quantity * itemPrice * 0.1, 100.0);
     	double price = base_price- discount_prince + shipping_cost;
+    	
         return price;
     }
 }
