@@ -4,9 +4,11 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class OwingPrinterTest {
@@ -24,8 +26,17 @@ public class OwingPrinterTest {
     }
 
     @Test
-    public void printOwing() {
-        System.out.print("hello");
-        assertEquals("hello", outContent.toString());
+    @Disabled
+    public void should_print_string_if_input_is_right() {
+    	// given
+    	OwingPrinter owingPrinter = new OwingPrinter();
+    	
+    	List<Order> orders = null;
+		// when
+    	owingPrinter.printOwing("A", orders );
+    	// then
+        assertEquals("A", outContent.toString());
     }
+    
+    
 }
